@@ -1,1 +1,5 @@
+#node_modules isimli klasörün tamamı göz ardı edilir.
 node_modules/
+
+#enn dosyalarının tamamını göz ardı et
+*.env
