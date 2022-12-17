@@ -23,7 +23,7 @@ const Navbar = () => {
             <KeyboardArrowDownIcon />
           </div>
           <div className="item">
-            <span>₺ TR</span>
+            <span>TR</span>
             <KeyboardArrowDownIcon />
           </div>
           <div className="item">
@@ -44,7 +44,7 @@ const Navbar = () => {
         </div>
         <div className="center">
           <Link className="link" to="/">
-            DamaStore
+            LAMASTORE
           </Link>
         </div>
         <div className="right">
