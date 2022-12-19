@@ -24,22 +24,26 @@ const Product = () => {
             {" "}
             <div className="left">
               <div className="images">
-                <img
-                  src={
-                    process.env.REACT_APP_UPLOAD_URL +
-                    data?.attributes?.img?.data?.attributes?.url
-                  }
-                  alt=""
-                  onClick={(e) => setSelectedImg("img")}
-                />
-                <img
-                  src={
-                    process.env.REACT_APP_UPLOAD_URL +
-                    data?.attributes?.img2?.data?.attributes?.url
-                  }
-                  alt=""
-                  onClick={(e) => setSelectedImg("img2")}
-                />
+                {data?.attributes?.img?.data?.attributes?.url != null ? (
+                  <img
+                    src={
+                      process.env.REACT_APP_UPLOAD_URL +
+                      data?.attributes?.img?.data?.attributes?.url
+                    }
+                    alt=""
+                    onClick={(e) => setSelectedImg("img")}
+                  />
+                ) : null}
+                {data?.attributes?.img2?.data?.attributes?.url != null ? (
+                  <img
+                    src={
+                      process.env.REACT_APP_UPLOAD_URL +
+                      data?.attributes?.img2?.data?.attributes?.url
+                    }
+                    alt=""
+                    onClick={(e) => setSelectedImg("img2")}
+                  />
+                ) : null}
               </div>
               <div className="mainImg">
                 <img

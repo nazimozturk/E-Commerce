@@ -9,22 +9,27 @@ const Card = ({ item }) => {
         <div className="card">
           <div className="image">
             {item?.attributes.isNew && <span>New Season</span>}
-            <img
-              src={
-                process.env.REACT_APP_UPLOAD_URL +
-                item.attributes?.img?.data?.attributes?.url
-              }
-              alt=""
-              className="mainImg"
-            />
-            <img
-              src={
-                process.env.REACT_APP_UPLOAD_URL +
-                item.attributes?.img2?.data?.attributes?.url
-              }
-              alt=""
-              className="secondImg"
-            />
+            {item.attributes?.img?.data?.attributes?.url != null ? (
+              <img
+                src={
+                  process.env.REACT_APP_UPLOAD_URL +
+                  item.attributes?.img?.data?.attributes?.url
+                }
+                alt=""
+                className="mainImg"
+              />
+            ) : null}
+
+            {item.attributes?.img2?.data?.attributes?.url != null ? (
+              <img
+                src={
+                  process.env.REACT_APP_UPLOAD_URL +
+                  item.attributes?.img2?.data?.attributes?.url
+                }
+                alt=""
+                className="secondImg"
+              />
+            ) : null}
           </div>
           <h2>{item?.attributes.title}</h2>
           <div className="prices">

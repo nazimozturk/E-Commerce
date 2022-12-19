@@ -6,7 +6,11 @@ import WestOutlinedIcon from "@mui/icons-material/WestOutlined";
 const Slider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  const data = ["img/tr.svg", "img/tr.svg", "img/tr.svg"];
+  const data = [
+    "https://images.pexels.com/photos/15286/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1600",
+    "https://images.pexels.com/photos/461940/pexels-photo-461940.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    "https://images.pexels.com/photos/1287145/pexels-photo-1287145.jpeg?auto=compress&cs=tinysrgb&w=1600",
+  ];
 
   const prevSlide = () => {
     setCurrentSlide(currentSlide === 0 ? 2 : (prev) => prev - 1);
