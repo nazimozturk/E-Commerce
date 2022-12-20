@@ -48,7 +48,7 @@ const Navbar = () => {
         </div>
         <div className="center">
           <Link className="link" to="/">
-            LAMASTORE
+            DAMASTORE
           </Link>
         </div>
         <div className="right">
